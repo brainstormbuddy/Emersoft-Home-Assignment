@@ -22,6 +22,18 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "types": ["node", "jest", "@testing-library/jest-dom"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "jest.setup.js",
+    "jest.config.js",
+    "components/Category.test.jsx",
+    "components/Input.test.jsx",
+    "components/ImageWithFallback.test.jsx",
+    "components/Logo.test.jsx"
+  ],
   "exclude": ["node_modules"]
 }
