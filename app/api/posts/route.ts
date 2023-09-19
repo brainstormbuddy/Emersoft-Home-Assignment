@@ -1,5 +1,5 @@
 import { readFileSync } from "fs";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import { getIdFromCategory } from "@/helpers/categories.helper";
 import {
   CATEGORY_PARAM_KEY,
@@ -9,7 +9,7 @@ import {
 } from "@/config/constants.config";
 import { TPost } from "@/types/post.type";
 
-export async function GET(req: Request) {
+export async function GET(req: NextRequest) {
   const query = req.url.split("?");
   const params = query.length > 1 ? new URLSearchParams(query[1]) : null;
 
