@@ -45,8 +45,6 @@ export default async function Home({ searchParams }: { searchParams: any }) {
   const search = searchParams[SEARCH_PARAM_KEY] || "";
 
   const { posts, categories } = await getData(page, category, search);
-  
-  console.log("POSTS_ENDPOINT ==>", POSTS_ENDPOINT);
 
   return (
     <>
@@ -97,8 +95,4 @@ export default async function Home({ searchParams }: { searchParams: any }) {
       </ul>
     </>
   );
-}
-
-function fetch(arg0: string): any {
-  throw new Error("Function not implemented.");
 }
