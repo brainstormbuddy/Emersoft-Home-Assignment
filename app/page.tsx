@@ -45,6 +45,8 @@ export default async function Home({ searchParams }: { searchParams: any }) {
   const search = searchParams[SEARCH_PARAM_KEY] || "";
 
   const { posts, categories } = await getData(page, category, search);
+  
+  console.log("POSTS_ENDPOINT ==>", POSTS_ENDPOINT);
 
   return (
     <>
