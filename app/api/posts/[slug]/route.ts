@@ -1,8 +1,8 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import { findCategories } from "@/helpers/categories.helper";
 import { loadCategories, loadPosts } from "@/helpers/data.helper";
 
-export async function GET(_: Request, { params: { slug } }: { params: { slug: string } }) {
+export async function GET(_: NextRequest, { params: { slug } }: { params: { slug: string } }) {
   const posts = loadPosts();
   const categories = loadCategories();
 
